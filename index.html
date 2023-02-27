@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.51.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("2FitxG4vruqf1_K2S");
+      })();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
+    <title>Calculate</title>
+  </head>
+  <body class="bg-blue-50">
+    <input type="checkbox" id="my-modal-3" class="modal-toggle" />
+    <div class="modal">
+      <div class="modal-box relative">
+        <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+        <!-- <form> -->
+        <h3 class="text-xl font-bold text-center mt-5">Download Your Quotation</h3>
+        <div class="flex justify-between">
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">Name</span>
+            </label>
+            <input type="text" id="fullName" placeholder="Your Name" class="input input-bordered" />
+          </div>
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">Email</span>
+            </label>
+            <input
+              type="email"
+              id="email_id"
+              placeholder="Your Email"
+              class="input input-bordered"
+            />
+          </div>
+        </div>
+        <div class="flex justify-between">
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">Phone</span>
+            </label>
+            <input type="text" id="phone" placeholder="Your Phone" class="input input-bordered" />
+          </div>
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">City</span>
+            </label>
+            <input type="text" id="city" placeholder="Your City" class="input input-bordered" />
+          </div>
+        </div>
+        <div class="form-control mt-6">
+          <button onclick="sendMail()" class="btn bg-[#0c59db]">Submit</button>
+        </div>
+        <!-- </form> -->
+      </div>
+    </div>
+
+    <main class="w-full flex">
+      <section class="w-2/3 mr-5 mt-5 ml-5 bg-white drop-shadow-md mb-5 px-5 py-3">
+        <div class="bg-slate-100 px-2 py-1 rounded-sm">
+          <p class="font-semibold">Are You Looking For?</p>
+        </div>
+        <div>
+          <div class="flex items-center">
+            <div
+              class="flex items-center border px-2 py-1 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="staticSite"
+                  value="Static/Normal"
+                  class="checkbox hover:checkbox-success mr-1"
+                />
+                <span class="ml-1">Static/Normal</span>
+              </label>
+            </div>
+            <div
+              class="flex items-center border px-2 py-1 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="dynamicSite"
+                  value="Dynamic"
+                  class="checkbox hover:checkbox-success mr-1"
+                />
+                <span class="ml-1">Dynamic</span>
+              </label>
+            </div>
+            <div
+              class="flex items-center border px-2 py-1 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="corporateSite"
+                  value="Corporate Site"
+                  class="checkbox hover:checkbox-success mr-1"
+                />
+                <span class="ml-1">Corporate Website</span>
+              </label>
+            </div>
+
+            <div
+              class="flex items-center border px-2 py-1 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="onePageSite"
+                  value="One Page"
+                  class="checkbox hover:checkbox-success mr-1"
+                />
+                <span class="ml-1">One Page Site</span>
+              </label>
+            </div>
+            <div
+              class="flex items-center border px-2 py-1 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="eCommerceSite"
+                  value="E-commerce"
+                  class="checkbox hover:checkbox-success mr-1"
+                />
+                <span class="ml-1">E-commerce</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="bg-slate-100 px-2 py-1 rounded-sm mt-5">
+          <p class="font-semibold">Number Of Pages</p>
+        </div>
+        <div>
+          <div class="flex items-center">
+            <div
+              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="oneToFour"
+                  value="1-4"
+                  class="checkbox hover:checkbox-success mr-1"
+                />
+                <span class="ml-1">1-4</span>
+              </label>
+            </div>
+            <div
+              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="fiveToEight"
+                  value="5-8"
+                  class="checkbox hover:checkbox-success mr-1"
+                />
+                <span class="ml-1">5-8</span>
+              </label>
+            </div>
+            <div
+              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="nineToTwenty"
+                  value="9-20"
+                  class="checkbox hover:checkbox-success mr-1"
+                />
+                <span class="ml-1">9-20</span>
+              </label>
+            </div>
+            <div
+              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="twentyOneToTwentyFive"
+                  value="21-25"
+                  class="checkbox hover:checkbox-success mr-1"
+                />
+                <span class="ml-1">21-25</span>
+              </label>
+            </div>
+            <div
+              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="unlimited"
+                  value="Unlimited"
+                  class="checkbox hover:checkbox-success mr-1"
+                />
+                <span class="ml-1">Unlimited</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="bg-slate-100 px-2 py-1 rounded-sm mt-5">
+            <p class="font-semibold">Pages Name</p>
+          </div>
+          <div class="flex items-center">
+            <div
+              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer" onclick="checkboxCheck('Home')">
+                <input
+                  type="checkbox"
+                  name="web-type"
+                  class="checkbox hover:checkbox-success mr-1"
+                />
+                <span class="ml-1">Home</span>
+              </label>
+            </div>
+            <div
+              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer" onclick="checkboxCheck('About')">
+                <input
+                  type="checkbox"
+                  name="web-type"
+                  class="checkbox hover:checkbox-success mr-1"
+                />
+                <span class="ml-1">About</span>
+              </label>
+            </div>
+            <div
+              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer" onclick="checkboxCheck('Contact')">
+                <input
+                  type="checkbox"
+                  name="web-type"
+                  class="checkbox hover:checkbox-success mr-1"
+                />
+                <span class="ml-1">Contact</span>
+              </label>
+            </div>
+            <div
+              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer" onclick="checkboxCheck('Service')">
+                <input
+                  type="checkbox"
+                  name="web-type"
+                  class="checkbox hover:checkbox-success mr-1"
+                />
+                <span class="ml-1">Service</span>
+              </label>
+            </div>
+            <div
+              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer" onclick="checkboxCheck('Career')">
+                <input
+                  type="checkbox"
+                  name="web-type"
+                  class="checkbox hover:checkbox-success mr-1"
+                />
+                <span class="ml-1">Career</span>
+              </label>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <div
+              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer" onclick="checkboxCheck('Gallery')">
+                <input
+                  type="checkbox"
+                  name="web-type"
+                  class="checkbox hover:checkbox-success mr-1"
+                />
+                <span class="ml-1">Gallery</span>
+              </label>
+            </div>
+            <div
+              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer" onclick="checkboxCheck('Product')">
+                <input
+                  type="checkbox"
+                  name="web-type"
+                  class="checkbox hover:checkbox-success mr-1"
+                />
+                <span class="ml-1">Product</span>
+              </label>
+            </div>
+            <div
+              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer" onclick="checkboxCheck('Portfolio')">
+                <input
+                  type="checkbox"
+                  name="web-type"
+                  class="checkbox hover:checkbox-success mr-1"
+                />
+                <span class="ml-1">Portfolio</span>
+              </label>
+            </div>
+            <div
+              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer" onclick="checkboxCheck('Media')">
+                <input
+                  type="checkbox"
+                  name="web-type"
+                  class="checkbox hover:checkbox-success mr-1"
+                />
+                <span class="ml-1">Media</span>
+              </label>
+            </div>
+            <div
+              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="nameCheckbox"
+                  value="Clients"
+                  class="checkbox hover:checkbox-success mr-1"
+                />
+                <span class="ml-1">Clients</span>
+              </label>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <div
+              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="nameCheckbox"
+                  value="Blogs"
+                  class="checkbox hover:checkbox-success mr-1"
+                />
+                <span class="ml-1">Blogs</span>
+              </label>
+            </div>
+            <div
+              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="nameCheckbox"
+                  value="Events"
+                  class="checkbox hover:checkbox-success mr-1"
+                />
+                <span class="ml-1">Events</span>
+              </label>
+            </div>
+            <div
+              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="nameCheckbox"
+                  value="News"
+                  class="checkbox hover:checkbox-success mr-1"
+                />
+                <span class="ml-1">News</span>
+              </label>
+            </div>
+            <div
+              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="nameCheckbox"
+                  value="Awards"
+                  class="checkbox hover:checkbox-success mr-1"
+                />
+                <span class="ml-1">Awards</span>
+              </label>
+            </div>
+            <div
+              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="nameCheckbox"
+                  value="Studies"
+                  class="checkbox hover:checkbox-success mr-1"
+                />
+                <span class="ml-1">Studies</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="bg-slate-100 px-2 py-1 rounded-sm mt-5">
+          <p class="font-semibold">Special Requirement</p>
+        </div>
+        <div>
+          <div class="flex items-center">
+            <div
+              class="flex items-center border px-2 py-[1px] w-full mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="seoFriendly"
+                  class="checkbox hover:checkbox-success mr-1"
+                />
+                <span class="ml-1">Seo Friendly</span>
+              </label>
+            </div>
+            <div
+              class="flex items-center border px-2 py-[1px] w-full mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="onPageSeo"
+                  class="checkbox hover:checkbox-success mr-1"
+                />
+                <span class="ml-1">On Page Seo</span>
+              </label>
+            </div>
+            <div
+              class="flex items-center border px-2 py-[1px] w-full mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="adminPanel"
+                  class="checkbox hover:checkbox-success mr-1"
+                />
+                <span class="ml-1">Admin Panel</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="w-1/3 ml-5 mt-5 mr-5 bg-white drop-shadow-md mb-5 h-96 relative">
+        <div class="bg-[#0c59db]">
+          <h3 class="text-xl text-white p-3 font-bold">Your Order</h3>
+        </div>
+        <div class="overflow-y-auto h-80">
+          <div id="static-type" class="ml-5 mt-5 mr-5"></div>
+          <div id="dynamic-type" class="ml-5 mt-5 mr-5"></div>
+          <div id="corporate-type" class="ml-5 mt-5 mr-5"></div>
+          <div id="one-page-type" class="ml-5 mt-5 mr-5"></div>
+          <div id="e-commerce-type" class="ml-5 mt-5 mr-5"></div>
+          <div id="one-to-four" class="ml-5 mt-5 mr-5"></div>
+          <div id="five-to-eight" class="ml-5 mt-5 mr-5"></div>
+          <div id="nine-to-twenty" class="ml-5 mt-5 mr-5"></div>
+          <div id="twenty-one-to-twenty-five" class="ml-5 mt-5 mr-5"></div>
+          <div id="unlimited" class="ml-5 mt-5 mr-5"></div>
+          <div id="checking" class="ml-5 mt-5 mr-5"></div>
+          <div id="seo-friendly" class="ml-5 mt-5 mr-5"></div>
+          <div id="on-page-seo" class="ml-5 mt-5 mr-5"></div>
+          <div id="admin-panel" class="ml-5 mt-5 mr-5"></div>
+          <div class="flex justify-between ml-5 mr-5 mt-5 mb-16">
+            <h2 class="text-xl font-bold">Total</h2>
+            <h2 id="total" class="text-xl font-bold">0</h2>
+          </div>
+        </div>
+        <div>
+          <!-- <button class="btn btn-block normal-case absolute bottom-0 bg-[#0041b3] hover:bg-black rounded-sm text-white">Download Quotation</button> -->
+          <label
+            for="my-modal-3"
+            class="btn btn-block normal-case absolute bottom-0 bg-[#0041b3] hover:bg-black rounded-sm text-white"
+          >
+            Download Quotation</label
+          >
+        </div>
+      </section>
+    </main>
+
+    <script src="JS/script.js"></script>
+    <script src="JS/email.js"></script>
+  </body>
+</html>
