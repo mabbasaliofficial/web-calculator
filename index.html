@@ -20,7 +20,8 @@
       })();
     </script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
+    <script src="https://kit.fontawesome.com/95ffa14197.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Calculate</title>
   </head>
   <body class="bg-blue-50">
@@ -28,9 +29,8 @@
     <div class="modal">
       <div class="modal-box relative">
         <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-        <!-- <form> -->
         <h3 class="text-xl font-bold text-center mt-5">Download Your Quotation</h3>
-        <div class="flex justify-between">
+        <div class="lg:flex justify-between">
           <div class="form-control">
             <label class="label">
               <span class="label-text">Name</span>
@@ -49,7 +49,7 @@
             />
           </div>
         </div>
-        <div class="flex justify-between">
+        <div class="lg:flex justify-between">
           <div class="form-control">
             <label class="label">
               <span class="label-text">Phone</span>
@@ -66,17 +66,16 @@
         <div class="form-control mt-6">
           <button onclick="sendMail()" class="btn bg-[#0c59db]">Submit</button>
         </div>
-        <!-- </form> -->
       </div>
     </div>
 
-    <main class="w-full flex">
-      <section class="w-2/3 mr-5 mt-5 ml-5 bg-white drop-shadow-md mb-5 px-5 py-3">
+    <main class="w-full lg:flex">
+      <section class="lg:w-2/3 mr-5 mt-5 ml-5 bg-white drop-shadow-md mb-5 px-5 py-5">
         <div class="bg-slate-100 px-2 py-1 rounded-sm">
           <p class="font-semibold">Are You Looking For?</p>
         </div>
         <div>
-          <div class="flex items-center">
+          <div class="lg:flex items-center">
             <div
               class="flex items-center border px-2 py-1 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
             >
@@ -85,7 +84,7 @@
                   type="checkbox"
                   name="staticSite"
                   value="Static/Normal"
-                  class="checkbox hover:checkbox-success mr-1"
+                  class="fancy-checkbox mr-1"
                 />
                 <span class="ml-1">Static/Normal</span>
               </label>
@@ -98,7 +97,7 @@
                   type="checkbox"
                   name="dynamicSite"
                   value="Dynamic"
-                  class="checkbox hover:checkbox-success mr-1"
+                  class="fancy-checkbox mr-1"
                 />
                 <span class="ml-1">Dynamic</span>
               </label>
@@ -111,7 +110,7 @@
                   type="checkbox"
                   name="corporateSite"
                   value="Corporate Site"
-                  class="checkbox hover:checkbox-success mr-1"
+                  class="fancy-checkbox mr-1"
                 />
                 <span class="ml-1">Corporate Website</span>
               </label>
@@ -125,7 +124,7 @@
                   type="checkbox"
                   name="onePageSite"
                   value="One Page"
-                  class="checkbox hover:checkbox-success mr-1"
+                  class="fancy-checkbox mr-1"
                 />
                 <span class="ml-1">One Page Site</span>
               </label>
@@ -138,7 +137,7 @@
                   type="checkbox"
                   name="eCommerceSite"
                   value="E-commerce"
-                  class="checkbox hover:checkbox-success mr-1"
+                  class="fancy-checkbox mr-1"
                 />
                 <span class="ml-1">E-commerce</span>
               </label>
@@ -149,71 +148,218 @@
           <p class="font-semibold">Number Of Pages</p>
         </div>
         <div>
-          <div class="flex items-center">
+          <div class="lg:flex items-center">
             <div
-              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+              class="flex items-center border px-2 py-[1px] lg:w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
             >
               <label class="label cursor-pointer">
                 <input
                   type="checkbox"
                   name="oneToFour"
                   value="1-4"
-                  class="checkbox hover:checkbox-success mr-1"
+                  class="fancy-checkbox mr-1"
                 />
                 <span class="ml-1">1-4</span>
               </label>
             </div>
             <div
-              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+              class="flex items-center border px-2 py-[1px] lg:w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
             >
               <label class="label cursor-pointer">
                 <input
                   type="checkbox"
                   name="fiveToEight"
                   value="5-8"
-                  class="checkbox hover:checkbox-success mr-1"
+                  class="fancy-checkbox mr-1"
                 />
                 <span class="ml-1">5-8</span>
               </label>
             </div>
             <div
-              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+              class="flex items-center border px-2 py-[1px] lg:w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
             >
               <label class="label cursor-pointer">
                 <input
                   type="checkbox"
                   name="nineToTwenty"
                   value="9-20"
-                  class="checkbox hover:checkbox-success mr-1"
+                  class="fancy-checkbox mr-1"
                 />
                 <span class="ml-1">9-20</span>
               </label>
             </div>
             <div
-              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+              class="flex items-center border px-2 py-[1px] lg:w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
             >
               <label class="label cursor-pointer">
                 <input
                   type="checkbox"
                   name="twentyOneToTwentyFive"
                   value="21-25"
-                  class="checkbox hover:checkbox-success mr-1"
+                  class="fancy-checkbox mr-1"
                 />
                 <span class="ml-1">21-25</span>
               </label>
             </div>
             <div
-              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+              class="flex items-center border px-2 py-[1px] lg:w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
             >
               <label class="label cursor-pointer">
                 <input
                   type="checkbox"
                   name="unlimited"
                   value="Unlimited"
-                  class="checkbox hover:checkbox-success mr-1"
+                  class="fancy-checkbox mr-1"
                 />
                 <span class="ml-1">Unlimited</span>
               </label>
+            </div>
+          </div>
+        </div>
+        <div class="lg:flex justify-between">
+          <div class="w-full mx-2">
+            <div class="bg-slate-100 px-2 py-1 rounded-sm mt-5">
+              <div class=" flex">
+                <div class="mr-1 font-semibold">
+                  Do You Want Domain
+                </div>
+                <div class="tooltip-css ml-1">
+                  <i class="fa-solid fa-circle-question text-orange-400"></i>
+                  <span class="tooltip-text-css">
+                    <h5 class="text-[15px] text-left">What is domain name and why it is needed?</h5>
+                    <p class="text-xs text-left">In general, a domain name identifies a network domain, or an Internet Protocol (IP) resource, such as a personal computer used to access the Internet, or a server computer. Domain names are often used to identify services provided through the Internet, such as websites and email services.
+                      <br>
+                      <br>
+                      For Example:-
+                      <br><br>
+                      www.domainname.com</p>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center border px-2 py-[1px] mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="domain"
+                  value="Domain"
+                  class="fancy-checkbox mr-1"
+                />
+                <span class="ml-1">Yes</span>
+              </label>
+            </div>
+            <label id="input-domain" class="hidden label cursor-pointer mt-2">
+              <input
+                type="text"
+                placeholder="Enter your domain"
+                name="input-domain"
+                class="border-b-2 border-red-700 w-full focus:outline-none"
+              />
+            </label>
+          </div>
+
+          <div class="w-full mx-2">
+            <div class="bg-slate-100 px-2 py-1 rounded-sm mt-5">
+              <div class=" flex">
+                <div class="mr-1 font-semibold">
+                  Do You Want Hosting
+                </div>
+                <div class="tooltip-css ml-1">
+                  <i class="fa-solid fa-circle-question text-orange-400"></i>
+                  <span class="tooltip-text-css">
+                    <h5 class="text-[15px] text-left">What is hosting used for</h5>
+                    <p class="text-xs text-left">When a hosting provider allocates space on a web server for a website to stories its files, they are hosting a website. Web hosting makes the files that comprise a website (code, images, etc.) available for viewing online. Every website you've ever visited is hosted on a server.</p>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex items-center border px-2 py-[1px] mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="hosting"
+                  value="Hosting"
+                  class="fancy-checkbox mr-1"
+                />
+                <span class="ml-1">Yes</span>
+              </label>
+            </div>
+            <div id="input-hosting" class="hidden mt-3 justify-center items-center">
+              <button
+                id="decrease-hosting"
+                class="h-8 w-8 bg-[#0c59db] rounded text-white flex items-center justify-center"
+              >
+                -
+              </button>
+              <div
+                id="hosting-value"
+                class="px-5 bg-gray-200 h-8 mx-2 rounded flex items-center justify-center"
+              ></div>
+              <button
+                id="increase-hosting"
+                class="h-8 w-8 bg-[#0c59db] rounded text-white flex items-center justify-center"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div class="w-full mx-2">
+            <div class="bg-slate-100 px-2 py-1 rounded-sm mt-5">
+              <div class=" flex">
+                <div class="mr-1 font-semibold">
+                  Do You Want Email Ids
+                </div>
+                <div class="tooltip-css ml-1">
+                  <i class="fa-solid fa-circle-question text-orange-400"></i>
+                  <span class="tooltip-text-css-email">
+                    <h5 class="text-[15px] text-left">what is Professional email id?                    </h5>
+                    <p class="text-xs text-left">A professional email address is the email address used for business communications, that is based on your custom domain. In other words, a professional email address is one that has your business name in it, in the form of a domain name.
+                      <br>
+                      <br>
+                      For Example:-
+                      <br><br>
+                      info@domainname.com</p>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex items-center border px-2 py-[1px] mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="email"
+                  value="Email"
+                  class="fancy-checkbox mr-1"
+                />
+                <span class="ml-1">Yes</span>
+              </label>
+            </div>
+            <div id="input-email" class="hidden mt-3 justify-center items-center">
+              <button
+                id="decrease-email"
+                class="h-8 w-8 bg-[#0c59db] rounded text-white flex items-center justify-center"
+              >
+                -
+              </button>
+              <div
+                id="email-value"
+                class="px-5 bg-gray-200 h-8 mx-2 rounded flex items-center justify-center"
+              >
+                1
+              </div>
+              <button
+                id="increase-email"
+                class="h-8 w-8 bg-[#0c59db] rounded text-white flex items-center justify-center"
+              >
+                +
+              </button>
             </div>
           </div>
         </div>
@@ -221,204 +367,259 @@
           <div class="bg-slate-100 px-2 py-1 rounded-sm mt-5">
             <p class="font-semibold">Pages Name</p>
           </div>
-          <div class="flex items-center">
+          <div class="lg:flex items-center">
             <div
-              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+              class="flex items-center border px-2 py-[1px] lg:w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
             >
-              <label class="label cursor-pointer" onclick="checkboxCheck('Home')">
+              <label class="label cursor-pointer">
                 <input
                   type="checkbox"
-                  name="web-type"
-                  class="checkbox hover:checkbox-success mr-1"
+                  id="checkbox1"
+                  name="checkboxes"
+                  value="Home"
+                  class="fancy-checkbox mr-1"
+                  onclick="updateParagraph()"
                 />
                 <span class="ml-1">Home</span>
               </label>
             </div>
             <div
-              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+              class="flex items-center border px-2 py-[1px] lg:w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
             >
-              <label class="label cursor-pointer" onclick="checkboxCheck('About')">
+              <label class="label cursor-pointer">
                 <input
                   type="checkbox"
-                  name="web-type"
-                  class="checkbox hover:checkbox-success mr-1"
+                  id="checkbox2"
+                  name="checkboxes"
+                  value="About"
+                  onclick="updateParagraph()"
+                  class="fancy-checkbox mr-1"
                 />
                 <span class="ml-1">About</span>
               </label>
             </div>
             <div
-              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+              class="flex items-center border px-2 py-[1px] lg:w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
             >
-              <label class="label cursor-pointer" onclick="checkboxCheck('Contact')">
+              <label class="label cursor-pointer">
                 <input
                   type="checkbox"
-                  name="web-type"
-                  class="checkbox hover:checkbox-success mr-1"
+                  id="checkbox3"
+                  name="checkboxes"
+                  value="Contact"
+                  onclick="updateParagraph()"
+                  class="fancy-checkbox mr-1"
                 />
                 <span class="ml-1">Contact</span>
               </label>
             </div>
             <div
-              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+              class="flex items-center border px-2 py-[1px] lg:w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
             >
-              <label class="label cursor-pointer" onclick="checkboxCheck('Service')">
+              <label class="label cursor-pointer">
                 <input
                   type="checkbox"
-                  name="web-type"
-                  class="checkbox hover:checkbox-success mr-1"
+                  id="checkbox4"
+                  name="checkboxes"
+                  value="Service"
+                  onclick="updateParagraph()"
+                  class="fancy-checkbox mr-1"
                 />
                 <span class="ml-1">Service</span>
               </label>
             </div>
             <div
-              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+              class="flex items-center border px-2 py-[1px] lg:w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
             >
-              <label class="label cursor-pointer" onclick="checkboxCheck('Career')">
+              <label class="label cursor-pointer">
                 <input
                   type="checkbox"
-                  name="web-type"
-                  class="checkbox hover:checkbox-success mr-1"
+                  id="checkbox5"
+                  name="checkboxes"
+                  value="Career"
+                  onclick="updateParagraph()"
+                  class="fancy-checkbox mr-1"
                 />
                 <span class="ml-1">Career</span>
               </label>
             </div>
           </div>
-          <div class="flex items-center">
+          <div class="lg:flex items-center">
             <div
-              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+              class="flex items-center border px-2 py-[1px] lg:w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
             >
-              <label class="label cursor-pointer" onclick="checkboxCheck('Gallery')">
+              <label class="label cursor-pointer">
                 <input
                   type="checkbox"
-                  name="web-type"
-                  class="checkbox hover:checkbox-success mr-1"
+                  id="checkbox6"
+                  name="checkboxes"
+                  value="Gallery"
+                  onclick="updateParagraph()"
+                  class="fancy-checkbox mr-1"
                 />
                 <span class="ml-1">Gallery</span>
               </label>
             </div>
             <div
-              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+              class="flex items-center border px-2 py-[1px] lg:w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
             >
-              <label class="label cursor-pointer" onclick="checkboxCheck('Product')">
+              <label class="label cursor-pointer">
                 <input
                   type="checkbox"
-                  name="web-type"
-                  class="checkbox hover:checkbox-success mr-1"
+                  id="checkbox7"
+                  name="checkboxes"
+                  value="Product"
+                  onclick="updateParagraph()"
+                  class="fancy-checkbox mr-1"
                 />
                 <span class="ml-1">Product</span>
               </label>
             </div>
             <div
-              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+              class="flex items-center border px-2 py-[1px] lg:w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
             >
-              <label class="label cursor-pointer" onclick="checkboxCheck('Portfolio')">
+              <label class="label cursor-pointer">
                 <input
                   type="checkbox"
-                  name="web-type"
-                  class="checkbox hover:checkbox-success mr-1"
+                  id="checkbox8"
+                  name="checkboxes"
+                  value="Portfolio"
+                  onclick="updateParagraph()"
+                  class="fancy-checkbox mr-1"
                 />
                 <span class="ml-1">Portfolio</span>
               </label>
             </div>
             <div
-              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+              class="flex items-center border px-2 py-[1px] lg:w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
             >
-              <label class="label cursor-pointer" onclick="checkboxCheck('Media')">
+              <label class="label cursor-pointer">
                 <input
                   type="checkbox"
-                  name="web-type"
-                  class="checkbox hover:checkbox-success mr-1"
+                  id="checkbox9"
+                  name="checkboxes"
+                  value="Media"
+                  onclick="updateParagraph()"
+                  class="fancy-checkbox mr-1"
                 />
                 <span class="ml-1">Media</span>
               </label>
             </div>
             <div
-              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+              class="flex items-center border px-2 py-[1px] lg:w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
             >
               <label class="label cursor-pointer">
                 <input
                   type="checkbox"
-                  name="nameCheckbox"
+                  id="checkbox10"
+                  name="checkboxes"
+                  onclick="updateParagraph()"
                   value="Clients"
-                  class="checkbox hover:checkbox-success mr-1"
+                  class="fancy-checkbox mr-1"
                 />
                 <span class="ml-1">Clients</span>
               </label>
             </div>
           </div>
-          <div class="flex items-center">
+          <div class="lg:flex items-center">
             <div
-              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+              class="flex items-center border px-2 py-[1px] lg:w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
             >
               <label class="label cursor-pointer">
                 <input
                   type="checkbox"
-                  name="nameCheckbox"
+                  id="checkbox11"
+                  name="checkboxes"
+                  onclick="updateParagraph()"
                   value="Blogs"
-                  class="checkbox hover:checkbox-success mr-1"
+                  class="fancy-checkbox mr-1"
                 />
                 <span class="ml-1">Blogs</span>
               </label>
             </div>
             <div
-              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+              class="flex items-center border px-2 py-[1px] lg:w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
             >
               <label class="label cursor-pointer">
                 <input
                   type="checkbox"
-                  name="nameCheckbox"
+                  id="checkbox12"
+                  name="checkboxes"
+                  onclick="updateParagraph()"
                   value="Events"
-                  class="checkbox hover:checkbox-success mr-1"
+                  class="fancy-checkbox mr-1"
                 />
                 <span class="ml-1">Events</span>
               </label>
             </div>
             <div
-              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+              class="flex items-center border px-2 py-[1px] lg:w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
             >
               <label class="label cursor-pointer">
                 <input
                   type="checkbox"
-                  name="nameCheckbox"
+                  id="checkbox13"
+                  name="checkboxes"
+                  onclick="updateParagraph()"
                   value="News"
-                  class="checkbox hover:checkbox-success mr-1"
+                  class="fancy-checkbox mr-1"
                 />
                 <span class="ml-1">News</span>
               </label>
             </div>
             <div
-              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+              class="flex items-center border px-2 py-[1px] lg:w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
             >
               <label class="label cursor-pointer">
                 <input
                   type="checkbox"
-                  name="nameCheckbox"
+                  id="checkbox14"
+                  name="checkboxes"
+                  onclick="updateParagraph()"
                   value="Awards"
-                  class="checkbox hover:checkbox-success mr-1"
+                  class="fancy-checkbox mr-1"
                 />
                 <span class="ml-1">Awards</span>
               </label>
             </div>
             <div
-              class="flex items-center border px-2 py-[1px] w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+              class="flex items-center border px-2 py-[1px] lg:w-40 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
             >
               <label class="label cursor-pointer">
                 <input
                   type="checkbox"
-                  name="nameCheckbox"
+                  id="checkbox15"
+                  name="checkboxes"
+                  onclick="updateParagraph()"
                   value="Studies"
-                  class="checkbox hover:checkbox-success mr-1"
+                  class="fancy-checkbox mr-1"
                 />
                 <span class="ml-1">Studies</span>
               </label>
             </div>
+          </div>
+          <div class="grid lg:grid-cols-5 grid-cols-1 gap-1" id="input-values"></div>
+          <div class="mt-3 flex lg:justify-start justify-between">
+            <input
+              type="text"
+              name="new-page"
+              id="new-page"
+              placeholder="Add a new page"
+              class="border-slate-900 border outline-none p-1 lg:w-1/4 w-[75%]"
+            />
+            <button
+              onclick="newPageAdd()"
+              class="font-bold px-4 py-1 bg-[#0c59db] text-white mr-1 ml-1"
+            >
+              +
+            </button>
           </div>
         </div>
         <div class="bg-slate-100 px-2 py-1 rounded-sm mt-5">
           <p class="font-semibold">Special Requirement</p>
         </div>
         <div>
-          <div class="flex items-center">
+          <div class="lg:flex items-center">
             <div
               class="flex items-center border px-2 py-[1px] w-full mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
             >
@@ -426,7 +627,7 @@
                 <input
                   type="checkbox"
                   name="seoFriendly"
-                  class="checkbox hover:checkbox-success mr-1"
+                  class="fancy-checkbox mr-1"
                 />
                 <span class="ml-1">Seo Friendly</span>
               </label>
@@ -438,7 +639,7 @@
                 <input
                   type="checkbox"
                   name="onPageSeo"
-                  class="checkbox hover:checkbox-success mr-1"
+                  class="fancy-checkbox mr-1"
                 />
                 <span class="ml-1">On Page Seo</span>
               </label>
@@ -450,15 +651,336 @@
                 <input
                   type="checkbox"
                   name="adminPanel"
-                  class="checkbox hover:checkbox-success mr-1"
+                  class="fancy-checkbox mr-1"
                 />
                 <span class="ml-1">Admin Panel</span>
               </label>
             </div>
           </div>
         </div>
+        <div>
+          <div class="lg:flex items-center">
+            <div
+              class="flex items-center border px-2 py-[1px] w-full mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="socialMediaLinking"
+                  class="fancy-checkbox mr-1"
+                />
+                <span class="ml-1">Social Media Linking</span>
+              </label>
+            </div>
+            <div
+              class="flex items-center border px-2 py-[1px] w-full mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="bannerDynamic"
+                  class="fancy-checkbox mr-1"
+                />
+                <span class="ml-1">Banner Dynamic</span>
+              </label>
+            </div>
+            <div
+              class="flex items-center border px-2 py-[1px] w-full mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="popupEnquiry"
+                  class="fancy-checkbox mr-1"
+                />
+                <span class="ml-1">Popup Enquiry</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="lg:flex items-center">
+            <div
+              class="flex items-center border px-2 py-[1px] w-full mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="editPages"
+                  class="fancy-checkbox mr-1"
+                />
+                <span class="ml-1">Edit Pages</span>
+              </label>
+            </div>
+            <div
+              class="flex items-center border px-2 py-[1px] w-full mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="managePages"
+                  class="fancy-checkbox mr-1"
+                />
+                <span class="ml-1">Manage Pages</span>
+              </label>
+            </div>
+            <div
+              class="flex items-center border px-2 py-[1px] w-full mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="contentWriting"
+                  class="fancy-checkbox mr-1"
+                />
+                <span class="ml-1">Content Writing</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="bg-slate-100 px-2 py-1 rounded-sm mt-5">
+          <p class="font-semibold">Special Requirement</p>
+        </div>
+        <div>
+          <div class="lg:flex items-center">
+            <div
+              class="flex items-center border px-2 py-[1px] w-full mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="tawkLiveChat"
+                  class="fancy-checkbox mr-1"
+                />
+                <span class="ml-1">Tawk Live Chat</span>
+              </label>
+            </div>
+            <div
+              class="flex items-center border px-2 py-[1px] w-full mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="googleMyBusinessPage"
+                  class="fancy-checkbox mr-1"
+                />
+                <span class="ml-1">Google My Business Page</span>
+              </label>
+            </div>
+            <div
+              class="flex items-center border px-2 py-[1px] w-full mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="whatsappChat"
+                  class="fancy-checkbox mr-1"
+                />
+                <span class="ml-1">Whatsapp Chat</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="lg:flex items-center">
+            <div
+              class="flex items-center border px-2 py-[1px] w-full mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="callButton"
+                  class="fancy-checkbox mr-1"
+                />
+                <span class="ml-1">Call Button</span>
+              </label>
+            </div>
+            <div
+              class="flex items-center border px-2 py-[1px] w-full mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="paymentGateway"
+                  class="fancy-checkbox mr-1"
+                />
+                <span class="ml-1">Payment Gateway</span>
+              </label>
+            </div>
+            <div
+              class="flex items-center border px-2 py-[1px] w-full mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input type="checkbox" name="SMSAPI" class="fancy-checkbox mr-1" />
+                <span class="ml-1">SMS API</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="lg:flex items-center">
+            <div
+              class="flex items-center border px-2 py-[1px] lg:w-[32.8%] w-full mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="highlyProfessionalLook"
+                  class="fancy-checkbox mr-1"
+                />
+                <span class="ml-1">Highly Professional Look</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="bg-slate-100 px-2 py-1 rounded-sm mt-5">
+          <p class="font-semibold">Technology</p>
+        </div>
+        <div>
+          <div class="lg:flex items-center justify-between">
+            <div
+              class="flex items-center border px-2 py-1 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="PHP"
+                  value="PHP"
+                  checked
+                  class="fancy-checkbox mr-1"
+                />
+                <span class="ml-1">PHP</span>
+              </label>
+            </div>
+            <div
+              class="flex items-center border px-2 py-1 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="HTML"
+                  value="HTML"
+                  checked
+                  class="fancy-checkbox mr-1"
+                />
+                <span class="ml-1">HTML</span>
+              </label>
+            </div>
+            <div
+              class="flex items-center border px-2 py-1 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="CSS"
+                  value="CSS"
+                  checked
+                  class="fancy-checkbox mr-1"
+                />
+                <span class="ml-1">CSS</span>
+              </label>
+            </div>
+
+            <div
+              class="flex items-center border px-2 py-1 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="JQUERY"
+                  value="JQUERY"
+                  checked
+                  class="fancy-checkbox mr-1"
+                />
+                <span class="ml-1">JQUERY</span>
+              </label>
+            </div>
+            <div
+              class="flex items-center border px-2 py-1 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="AJAX"
+                  value="AJAX"
+                  checked
+                  class="fancy-checkbox mr-1"
+                />
+                <span class="ml-1">AJAX</span>
+              </label>
+            </div>
+            <div
+              class="flex items-center border px-2 py-1 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="JAVASCRIPT"
+                  value="JAVASCRIPT"
+                  checked
+                  class="fancy-checkbox mr-1"
+                />
+                <span class="ml-1">JAVA SCRIPT </span>
+              </label>
+            </div>
+            <div
+              class="flex items-center border px-2 py-1 mt-3 rounded-sm hover:bg-[#0c59db] hover:text-white hover:border-black mr-1"
+            >
+              <label class="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="MYSQL  "
+                  value="MYSQL   "
+                  checked
+                  class="fancy-checkbox mr-1"
+                />
+                <span class="ml-1">MYSQL </span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="lg:flex">
+          <div class="lg:w-2/3">
+            <div class="bg-slate-100 px-2 py-1 rounded-sm mt-5 lg:mr-2">
+              <p class="font-semibold">Extra Requirement</p>
+            </div>
+            <div class="mt-3 lg:mr-2">
+              <textarea
+                class="border border-black w-full p-3 h-40 outline-none"
+                placeholder="Write here..."
+              ></textarea>
+            </div>
+          </div>
+          <div class="lg:w-1/3">
+            <div class="bg-slate-100 px-2 py-1 rounded-sm mt-5 lg:ml-2">
+              <p class="font-semibold">Attachment File</p>
+            </div>
+            <div>
+              <div class="mt-3 lg:ml-2">
+                <div
+                  class="flex justify-center h-40 px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md"
+                >
+                  <div class="space-y-1 text-center">
+                    <i class="fa-solid fa-cloud-arrow-up text-5xl"></i>
+                    <div class="flex text-sm text-gray-600">
+                      <label
+                        for="file-upload"
+                        class="relative cursor-pointer font-medium text-blue-600 hover:text-blue-500 focus-within:outline-none focus-within:shadow-outline-blue"
+                      >
+                        <span>Upload a file</span>
+                        <input id="file-upload" name="file-upload" type="file" class="sr-only" />
+                      </label>
+                      <p class="pl-1">or drag and drop</p>
+                    </div>
+                    <p class="text-xs text-gray-500">PNG, JPG, GIF up to 10MB</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
-      <section class="w-1/3 ml-5 mt-5 mr-5 bg-white drop-shadow-md mb-5 h-96 relative">
+      <section class="lg:w-1/3 ml-5 mt-5 mr-5 bg-white drop-shadow-md mb-5 h-96 sticky top-0">
         <div class="bg-[#0c59db]">
           <h3 class="text-xl text-white p-3 font-bold">Your Order</h3>
         </div>
@@ -473,14 +995,34 @@
           <div id="nine-to-twenty" class="ml-5 mt-5 mr-5"></div>
           <div id="twenty-one-to-twenty-five" class="ml-5 mt-5 mr-5"></div>
           <div id="unlimited" class="ml-5 mt-5 mr-5"></div>
-          <div id="checking" class="ml-5 mt-5 mr-5"></div>
+          <div id="domain" class="ml-5 mt-5 mr-5"></div>
+          <div id="hosting" class="ml-5 mt-5 mr-5"></div>
+          <div id="email" class="ml-5 mt-5 mr-5"></div>
+          <div id="checking" class="ml-5 mt-5 mr-5">
+            <p id="checkboxValues"></p>
+            <p id="inputValues"></p>
+          </div>
           <div id="seo-friendly" class="ml-5 mt-5 mr-5"></div>
           <div id="on-page-seo" class="ml-5 mt-5 mr-5"></div>
           <div id="admin-panel" class="ml-5 mt-5 mr-5"></div>
+          <div id="social-media-linking" class="ml-5 mt-5 mr-5"></div>
+          <div id="banner-dynamic" class="ml-5 mt-5 mr-5"></div>
+          <div id="popup-enquiry" class="ml-5 mt-5 mr-5"></div>
+          <div id="edit-pages" class="ml-5 mt-5 mr-5"></div>
+          <div id="manage-pages" class="ml-5 mt-5 mr-5"></div>
+          <div id="content-writing" class="ml-5 mt-5 mr-5"></div>
+          <div id="tawk-live-chat" class="ml-5 mt-5 mr-5"></div>
+          <div id="google-my-business-page" class="ml-5 mt-5 mr-5"></div>
+          <div id="whatsapp-chat" class="ml-5 mt-5 mr-5"></div>
+          <div id="call-button" class="ml-5 mt-5 mr-5"></div>
+          <div id="payment-gateway" class="ml-5 mt-5 mr-5"></div>
+          <div id="sms-api" class="ml-5 mt-5 mr-5"></div>
+          <div id="highly-professional-look" class="ml-5 mt-5 mr-5"></div>
           <div class="flex justify-between ml-5 mr-5 mt-5 mb-16">
             <h2 class="text-xl font-bold">Total</h2>
             <h2 id="total" class="text-xl font-bold">0</h2>
           </div>
+          
         </div>
         <div>
           <!-- <button class="btn btn-block normal-case absolute bottom-0 bg-[#0041b3] hover:bg-black rounded-sm text-white">Download Quotation</button> -->
@@ -492,9 +1034,10 @@
           >
         </div>
       </section>
+
+
     </main>
 
     <script src="JS/script.js"></script>
-    <script src="JS/email.js"></script>
   </body>
 </html>
